@@ -29,7 +29,6 @@ if __name__ == '__main__':
         print('[INFO] service etl is running..')
         df = pd.read_sql(query, engine)
         print(df)
-        
         # create schema dwh
         cursor_dwh.execute(dwh_design)
         conn_dwh.commit()
@@ -47,3 +46,4 @@ if __name__ == '__main__':
     except Exception as e:
         print('[INFO] service is failed')
         print(str(e))
+        
